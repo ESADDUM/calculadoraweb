@@ -1,4 +1,4 @@
-function insert (num) { /* funcção chamada pelo "onclick"  */
+function insert (num) { /* função chamada pelo "onclick" onde será inserido o valor que está dentro das aspas simples (html)*/
     var numero = document.getElementById ('resultado').innerHTML;
     document.getElementById ('resultado').innerHTML = numero + num
 
@@ -13,15 +13,37 @@ function voltar () {
 
 }
 
+/*function calcular(){
+	var resultado = document.getElementById('resultado').innerHTML;
+	if (!isNaN(eval(resultado)) && isFinite(eval(resultado))) {
+        document.getElementById('resultado').innerHTML = eval(resultado).toFixed(2);
+    } else {
+        alert("Impossível Calcular");
+        limpar(); // Chama a função limpar
+    }
+}
+		/*document.getElementById('resultado').innerHTML	= "Impossível calcular"
+		throw new Error("Impossível Calcular");*/
+
 function calcular() {
     var resultadoElemento = document.getElementById('resultado');
-    var resultado = resultadoElemento.innerHTML.trim;
+    var resultado = resultadoElemento.innerHTML.trim();
     
     /* verifica se o ultimo caractere é um numero*/
-    var ultimoCaractere = /\d$/. test(resultadp)
+    var ultimoCaractereNumerico = /\d$/. test(resultado);
+    /*essa é uma expressão nativa do javascript: onde /\d/ é uma classe de caracteres que corresponde a qualquer dígito decimal (0-9) e $: Isso representa o final de uma string.*/ 
+    
+    if (ultimoCaractereNumerico) {
+        resultadoElement.innerHTML = eval(resultado).toFixed(2);
+    } else {
+        alert("Mensagem de erro: Impossível Calcular");
+        limpar(); /* Chama a função limpar*/
+    }
+}
 
-    try {
-        if (resultado) {
+
+/* CODIGO ENVIADO PELO EDUARDO (CHAT GPT)
+	if (resultado) {
             var resultadoCalculado = eval(resultado);
             if (isNaN(resultadoCalculado) || !isFinite(resultadoCalculado)) {
                 throw new Error("Impossível Calcular");
@@ -29,10 +51,7 @@ function calcular() {
                 resultadoElemento.innerHTML = resultadoCalculado;
             }
         } else {
-            throw new Error("Nenhuma expressão para calcular");
-        }
-    } catch (error) {
-        resultadoElemento.innerHTML = "Impossível Calcular";
-    }
-}
+            throw new
+			
+	*/
 

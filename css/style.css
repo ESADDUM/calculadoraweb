@@ -1,6 +1,6 @@
 .fundo_degrade{
     background-image: linear-gradient(45deg,rgb(148, 142, 142), rgb(45, 45, 46));
-    height: 100vh; /* direção do degrade vh = degrade inclinado - v= degrade na vertical - h= degrade na horizontal */
+    height: 92vh; /* direção do degrade vh = degrade inclinado - v= degrade na vertical - h= degrade na horizontal */
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
@@ -34,6 +34,7 @@
     width: 210px;
     height: 30px;
     margin: 5px;
+    padding: 5px;
     text-align: right;
     color: black;
     font-size: 25px;
@@ -41,7 +42,7 @@
 }
 
 footer{
-    background: black;
+    background: #333;
     color: white;
     padding: 10px;
     text-align: center;
@@ -74,14 +75,3 @@ a:hover{
 
 .social-icons a:hover {
     color: red; /* cor desejada para o hover */
-
-}
-h1{
-
-}
-h2{
-
-}
-h3{
-
-}
