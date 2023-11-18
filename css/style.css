@@ -75,3 +75,7 @@ a:hover{
 
 .social-icons a:hover {
     color: red; /* cor desejada para o hover */
+}
+.links {
+    color: darkgray;
+}
